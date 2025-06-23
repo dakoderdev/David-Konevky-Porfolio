@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @theme {
-  --color-primary: #fafafa;
-  --color-secondary: #0000ff;
+  --color-primary: black;
+  --color-secondary: oklch(96.7% 0.003 264.542);
 }
 /* CSS */
 :root {
