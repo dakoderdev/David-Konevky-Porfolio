@@ -1,14 +1,18 @@
-<div data-aos="fade-up"
-    data-aos-duration="2000">
-<svg
-    class=" text-secondary drop-shadow-lg" 
-    id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 530.76 74" fill="url(#hero-gradient)" stroke="currentColor" stroke-width="0.25"
->
+<div data-aos="fade-up" data-aos-duration="2000">
+  <svg
+    class="text-secondary drop-shadow-lg"
+    id="hero-svg"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 530.76 74"
+    fill="url(#hero-gradient)"
+    stroke="currentColor"
+    stroke-width="0.25"
+  >
     <defs>
-    <linearGradient id="hero-gradient" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <linearGradient id="hero-gradient" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
         <stop offset="0%" stop-color="currentColor" />
         <stop offset="100%" stop-color="oklch(75.7% 0.022 261.325)" /> 
-    </linearGradient>
+      </linearGradient>
     </defs>
     <path class="cls-1" d="M30.94,0h13.27v59.32h-13.27v-4.23h-.17c-1.66,2.24-6.14,5.56-12.28,5.56C7.22,60.64,0,52.02,0,38.08S7.22,15.51,18.5,15.51c6.14,0,10.62,3.32,12.28,5.56h.17V0ZM30.7,38.08c0-8.3-3.15-12.61-8.54-12.61s-8.55,4.31-8.55,12.61,3.15,12.61,8.55,12.61,8.54-4.31,8.54-12.61Z"/>
     <path class="cls-1" d="M48.12,48.2c0-8.79,7.22-12.2,16.26-14.1,4.65-1,11.2-1.66,11.2-5.89,0-2.32-1.83-3.82-5.64-3.82-4.89,0-7.13,1.99-7.55,6.14h-12.61c.41-8.13,6.39-15.1,20.74-15.1,11.53,0,17.92,4.65,17.92,17.67v16.43c0,2.24.25,3.24,1.58,3.24.33,0,.58,0,1.08-.08v6.3c-2.65.5-5.39.75-7.3.75-5.31,0-7.3-1.99-7.96-5.56h-.17c-2.99,3.73-7.88,6.47-14.02,6.47-8.3,0-13.52-4.89-13.52-12.44ZM75.58,42.14v-3.57c-1.74.66-3.73,1.16-7.22,1.99-4.89,1.16-6.64,3.24-6.64,6.22,0,3.24,2.07,4.73,5.48,4.73,5.31,0,8.38-4.48,8.38-9.37Z"/>
@@ -22,5 +26,69 @@
     <path class="cls-1" d="M410.64,59.32l-14.68-42.48h13.44l8.63,28.04h.17l8.63-28.04h13.11l-14.68,42.48h-14.6Z"/>
     <path class="cls-1" d="M470.04,59.32l-10.04-17.5-4.65,4.89v12.61h-13.27V0h13.27v32.6l14.19-15.76h14.1l-15.02,15.93,16.76,26.55h-15.35Z"/>
     <path class="cls-1" d="M490.2,73.17v-10.12c1.41.17,2.49.25,3.98.25,2.57,0,6.3-.08,7.47-4.56l-16.92-41.89h13.69l9.95,27.96h.17l9.13-27.96h13.11l-15.51,42.56c-3.57,9.71-7.72,14.6-17.09,14.6-2.9,0-5.14-.25-7.96-.83Z"/>
-</svg>
+  </svg>
 </div>
+
+<nav id="nav-icon-container" class="fixed top-0 left-0 z-50 w-full p-3 flex items-stretch gap-3 rounded-lg bg-primary/75 border border-secondary/10 backdrop-blur-md">
+    <svg id="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 234 78" class="h-8 w-auto fill-secondary/90">
+        <path d="m116.87,39.08C116.87,17.59,99.48.16,78,.09h0S0,.08,0,.08v78h78c21.48-.07,38.87-17.51,38.87-39Z"/>
+        <rect x="117" width="39" height="78"/>
+        <polygon points="234 0 195 0 156 39 195 78 234 78 195 39 234 0"/>
+    </svg>
+    <ul class="flex w-full h-full items-stretch justify-between pl-4">
+        <li>
+            <button class="rounded-md text-xs py-2 px-4 text-secondary/60 font-medium hover:bg-secondary/30 hover:text-secondary transition">
+                Habilidades
+            </button>
+            <button class="rounded-md text-xs py-2 px-4 text-secondary/60 font-medium hover:bg-secondary/30 hover:text-secondary transition">
+                Mis Proyectos
+            </button>
+        </li>
+        <div class="flex gap-3">
+            <li>
+                <button class="rounded-md bg-gradient-to-br from-secondary to-secondary/60 text-xs py-2 px-4 font-medium hover:bg-secondary/30 transition">
+                    Enviame un Email
+                </button>
+            </li>
+            <li>
+                <button class="rounded-md text-xs py-2 px-4 text-secondary/60 font-medium hover:bg-secondary/30 hover:text-secondary transition">
+                    Ver mi CV
+                </button>
+            </li>
+        </div>
+    </ul>
+</nav>
+
+<style>
+  #nav-icon-container {
+    opacity: 0;
+    translate: 0 -90%;
+    pointer-events: none;
+    transition: opacity 0.3s ease, translate 0.3s ease;
+  }
+
+  #nav-icon-container.visible {
+    opacity: 1;
+    translate: 0;
+    pointer-events: auto;
+  }
+</style>
+
+<script is:inline>
+    document.addEventListener("DOMContentLoaded", () => {
+        window.addEventListener("scroll", () => {
+            const svg = document.getElementById("hero-svg");
+            const navIcon = document.getElementById("nav-icon-container");
+            if (!svg || !navIcon) return;
+
+            const rect = svg.getBoundingClientRect();
+
+            // Trigger 100px later
+            if (rect.top + rect.height < -100) {
+                navIcon.classList.add("visible");
+            } else {
+                navIcon.classList.remove("visible");
+            }
+        });
+    });
+</script>
