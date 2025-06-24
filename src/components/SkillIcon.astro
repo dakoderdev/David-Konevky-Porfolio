@@ -1,0 +1,23 @@
+---
+export interface Props {
+  name: string;
+  key: number;
+  alt: string;
+  src: string;
+  extraRounded?: boolean;
+}
+const { name, key, alt, src, extraRounded=false } = Astro.props;
+import Image from "astro/components/Image.astro";
+---
+<article data-aos="fade-up" data-aos-delay={key * 50} class="flex flex-col text-xs text-secondary/60 items-center gap-2">
+  <div class="w-16 h-16 rounded-2xl border border-secondary/10 p-3">
+    <Image 
+      src={src} 
+      class={`w-full h-full object-contain inline-block transition-colors ${extraRounded ? 'rounded-lg' : 'rounded-sm'}`} 
+      alt={alt} 
+      width={24} 
+      height={24} 
+    />
+  </div>
+  <p>{name}</p>
+</article>

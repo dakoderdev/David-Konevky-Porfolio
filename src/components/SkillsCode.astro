@@ -1,0 +1,124 @@
+---
+import Image from "astro/components/Image.astro";
+import { Code } from 'astro:components';
+
+const codeJavascript = `/* JAVASCRIPT */
+// Prueba ver las diferencias entre algunos de los lenguajes de programación que manejo
+const habilidadesJavascript = ['Variables', 'Funciones', 'Condicionales', 'Ciclos','Y mucho mas!'];
+
+function listarHabilidades(lista) {
+  console.log('📌 Mis habilidades con JavaScript:');
+  lista.forEach((item, index) => {
+    console.log("\${index + 1}. \${item}");
+  });
+}
+
+listarHabilidades(habilidadesJavascript);
+`;
+
+const codeTypescript = `/* TYPESCRIPT */
+// Prueba ver las diferencias entre algunos de los lenguajes de programación que manejo
+const habilidadesTypescript: string[] = ['Variables', 'Funciones', 'Condicionales', 'Ciclos','Y mucho mas!'];
+
+function listarHabilidades(lista: string[]): void {
+  console.log('📌 Mis habilidades con TypeScript:');
+  lista.forEach((item, index) => {
+    console.log(\`\${index + 1}. \${item}\`);
+  });
+}
+
+listarHabilidades(habilidadesTypescript);
+`;
+
+const codeCSharp = `/* C# */
+// Prueba ver las diferencias entre algunos de los lenguajes de programación que manejo
+var habilidadesCSharp = new List<string> { "Variables", "Funciones", "Condicionales", "Ciclos", "Y mucho mas!" };
+
+void ListarHabilidades(List<string> lista)
+{
+    Console.WriteLine("📌 Mis habilidades con C#:");
+    for (int i = 0; i < lista.Count; i++)
+    {
+        Console.WriteLine($"\{i + 1}. \{lista[i]\}");
+    }
+}
+
+ListarHabilidades(habilidadesCSharp);
+`;
+
+const codePython = `# PYTHON
+# Prueba ver las diferencias entre algunos de los lenguajes de programación que manejo
+habilidades_python = ['Variables', 'Funciones', 'Condicionales', 'Ciclos', 'Y mucho mas!']
+
+def listar_habilidades(lista):
+    print('📌 Mis habilidades con Python:')
+    for i, item in enumerate(lista, 1):
+        print(f"\{i}. \{item\}")
+
+listar_habilidades(habilidades_python)
+`;
+
+---
+
+<ul id="buttons-container" class="hidden md:flex w-full pl-2 items-center gap-2 text-sm text-secondary/80 font-medium">
+    <li data-aos="fade-left"><button data-lang="javascript" class="flex gap-3 py-2 pl-2 pr-4 border-secondary/10 border-x border-t rounded-x-md rounded-t-md cursor-pointer transition-colors duration-500 bg-emerald-600/10 text-secondary">
+        <Image src="/framework-logos/javascript.png" class="w-5 h-5 inline-block rounded-sm transition-colors" alt="Javascript logo" width={24} height={24} />
+        Javascript
+    </button></li>
+    <li data-aos="fade-left"><button data-lang="typescript" class="flex gap-3 py-2 pl-2 pr-4 border-secondary/10 border-x border-t rounded-x-md rounded-t-md cursor-pointer transition-colors duration-500">
+        <Image src="/framework-logos/typescript.svg" class="w-5 h-5 inline-block rounded-sm transition-colors" alt="Typescript logo" width={24} height={24} />
+        Typescript
+    </button></li>
+    <li data-aos="fade-left"><button data-lang="csharp" class="flex gap-3 py-2 pl-2 pr-4 border-secondary/10 border-x border-t rounded-x-md rounded-t-md cursor-pointer transition-colors duration-500">
+        <Image src="/framework-logos/c-sharp.png" class="w-5 h-5 inline-block rounded-sm transition-colors" alt="C# logo" width={24} height={24} />
+        C#
+    </button></li>
+    <li data-aos="fade-left"><button data-lang="python" class="flex gap-3 py-2 pl-2 pr-4 border-secondary/10 border-x border-t rounded-x-md rounded-t-md cursor-pointer transition-colors duration-500">
+        <Image src="/framework-logos/python.webp" class="w-5 h-5 inline-block rounded-sm transition-colors" alt="Python logo" width={24} height={24} />
+        Python
+    </button></li>
+</ul>
+
+<div data-aos="fade-left" data-aos-duration="600" class="hidden md:block w-full md:p-8 border border-secondary/10 rounded-md">
+    <div id="code-javascript">
+        <Code code={codeJavascript} lang="javascript" theme="vitesse-black" defaultColor={false} />
+    </div>
+    <div id="code-typescript" class="hidden">
+        <Code code={codeTypescript} lang="typescript" theme="vitesse-black" defaultColor={false} />
+    </div>
+    <div id="code-csharp" class="hidden">
+        <Code code={codeCSharp} lang="csharp" theme="vitesse-black" defaultColor={false} />
+    </div>
+    <div id="code-python" class="hidden">
+        <Code code={codePython} lang="python" theme="vitesse-black" defaultColor={false} />
+    </div>
+</div>
+
+<script>
+  const buttonsContainer = document.getElementById('buttons-container');
+  const buttons = buttonsContainer.querySelectorAll('button');
+  const codeBlocks = {
+    javascript: document.getElementById('code-javascript'),
+    typescript: document.getElementById('code-typescript'),
+    csharp: document.getElementById('code-csharp'),
+    python: document.getElementById('code-python'),
+  };
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Estilo activo
+      buttons.forEach(btn => btn.classList.remove('bg-emerald-600/10', 'text-secondary'));
+      button.classList.add('bg-emerald-600/10', 'text-secondary');
+
+      // Mostrar el bloque correcto
+      const lang = button.getAttribute('data-lang');
+      Object.keys(codeBlocks).forEach(key => {
+        if (key === lang) {
+          codeBlocks[key].classList.remove('hidden');
+        } else {
+          codeBlocks[key].classList.add('hidden');
+        }
+      });
+    });
+  });
+</script>

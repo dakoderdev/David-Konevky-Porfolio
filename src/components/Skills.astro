@@ -1,0 +1,61 @@
+---
+import SkillsCode from "./SkillsCode.astro";
+import SkillIcon from "./SkillIcon.astro";
+---
+<section data-aos="fade-up" id="#habilidades" class="relative overflow-hidden text-secondary rounded-t-4xl px-4 py-8 md:p-14 min-h-screen 2xl:max-w-7xl mx-auto border-t border-secondary/10 h-fit">
+    <div class="absolute -top-24 left-1/2 md:left-3/4 -translate-1/2 w-1/2 h-1/2 -z-10 rounded-b-full blur-3xl bg-emerald-500/20"></div>
+    <div class="flex flex-col gap-4 items-center w-full">
+        <article data-aos="flip-right" class="w-fit h-fit p-5 rounded-4xl bg-primary/80 border border-secondary/10 shadow-lg shadow-emerald-500/10">
+            <svg xmlns="http://www.w3.org/2000/svg" width="84" height="84" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M10 4v4"/><path d="M2 8h20"/><path d="M6 4v4"/></svg>
+        </article>
+        <h2 data-aos="fade-up" class="text-secondary text-4xl md:text-5xl text-center pb-6 font-semibold">Habilidades</h2>
+        <p data-aos="fade-up" class="text-secondary/80 text-base md:text-lg max-w-2xl text-pretty md:pb-6">
+        Mi <b>especialidad</b> es el desarrollo de aplicaciones web <b>eficientes</b>, <b>estéticas</b> y <b>con un buen rendimiento</b>.
+        Me esfuerzo por encontrar el equilibrio entre <b>diseño</b>, <b>funcionalidad</b> y <b>usabilidad</b>, creando soluciones claras y orientadas a las necesidades reales de los usuarios y del cliente.
+        Mi enfoque está en la <b>calidad del código</b>, la <b>escalabilidad de los proyectos</b> y <b>crear un producto unico.</b>
+        </p>
+        <div class="w-full flex pb-3 md:pb-6 flex-col">
+           <SkillsCode />
+        </div>
+        <div class="w-full grid gap-y-8 md:grid-cols-2 content-start justify-center px-8">
+            <div class="md:border-r border-secondary/10">
+                <h3 class="text-secondary/80 text-3xl pb-4 font-medium text-center">Lenguajes</h3>
+                <div class="flex flex-wrap gap-3 justify-center">
+                    {[
+                        { name: "HTML", alt: "HTML logo", src: "/framework-logos/html.svg" },
+                        { name: "CSS", alt: "CSS logo", src: "/framework-logos/css.svg" },
+                        { name: "Javascript", alt: "Javascript logo", src: "/framework-logos/javascript.png" },
+                        { name: "Typescript", alt: "Typescript logo", src: "/framework-logos/typescript.svg" },
+                        { name: "C#", alt: "C# logo", src: "/framework-logos/c-sharp.png" },
+                        { name: "Python", alt: "Python logo", src: "/framework-logos/python.webp" }
+                    ].map((skill, idx) => (
+                        <SkillIcon {...skill} key={idx} />
+                    ))}
+                </div>
+            </div>
+            <div>
+                <h3 class="text-secondary/80 text-3xl pb-4 font-medium text-center">Frameworks</h3>
+                <div class="flex flex-wrap gap-3 justify-center">
+                    {[
+                        { name: "React", alt: "React logo", src: "/framework-logos/react.svg" },
+                        { name: "Next.js", alt: "Next.js logo", src: "/framework-logos/nextjs.jpeg" },
+                        { name: "Astro", alt: "Astro logo", src: "/framework-logos/astro.png", extraRounded: true }
+                    ].map((framework, idx) => (
+                        <SkillIcon {...framework} key={idx} />
+                    ))}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    pre {
+        background: transparent !important;
+        color: oklch(85% 0.02 260); 
+        font-family: 'Fira Code', monospace;
+        padding: 1rem;
+        border-radius: 0.75rem;
+        overflow-x: auto;
+        }
+</style>
