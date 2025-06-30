@@ -1,7 +1,7 @@
 ---
 import Website from "./Website.astro";
 ---
-<section data-aos="fade-up" class="relative overflow-hidden text-secondary rounded-t-4xl px-4 py-8 md:p-14 2xl:max-w-7xl mx-auto border-t border-secondary/10 h-fit">
+<section data-aos="fade-up" id="mis-proyectos" data-aos-duration="700" class="relative overflow-hidden text-secondary rounded-t-4xl px-4 py-8 md:p-14 2xl:max-w-7xl mx-auto border-t border-secondary/10 h-fit">
     <div class="absolute -top-24 left-1/2 md:left-2/5 -translate-1/2 w-1/2 h-1/2 -z-10 rounded-b-full blur-3xl bg-pink-500/20"></div>
     <div class="flex flex-col gap-4 items-center w-full">
         <article data-aos="flip-right" class="w-fit h-fit p-5 rounded-4xl bg-primary/80 border border-secondary/10 shadow-lg shadow-pink-500/10">
@@ -9,14 +9,32 @@ import Website from "./Website.astro";
                 <path d="M7 2h10"/><path d="M5 6h14"/><rect width="18" height="12" x="3" y="10" rx="2"/>
             </svg>
         </article>
-        <h2 data-aos="fade-up" class="text-secondary text-4xl md:text-5xl text-center pb-6 font-semibold">Mis Proyectos</h2>
+        <h2 data-aos="fade-up" data-aos-duration="500" class="text-secondary text-4xl md:text-5xl text-center pb-6 font-semibold">Mis Proyectos</h2>
         <p data-aos="fade-up" class="text-secondary/80 text-base md:text-lg max-w-2xl text-pretty md:pb-6">
-            Mi proceso de desarrollo de proyectos se basa en priorizar la <b>experiencia de usuario</b> y brindar un <b>nivel de detalle</b> que se sienta 
-            <b>satisfactorio</b> al navegar por ellos. Siempre intento <b>adaptar</b> la manera en que abordo cada proyecto segun su <b>tamaño</b> y <b>complejidad</b>.
+            Mi proceso de desarrollo se centra en priorizar la <b>experiencia de usuario</b> y ofrecer un <b>nivel de detalle</b> que haga que navegar por cada uno de mis proyectos sea <b>satisfactorio</b>.  
+            Siempre busco <b>adaptar</b> mi enfoque según el <b>tamaño</b> y la <b>complejidad</b> de cada caso.
         </p>
-        <div class="grid grid-cols-2 gap-3 border-t border-secondary/10 rounded-3xl w-full h-fit p-8 shadow-lg shadow-pink-500/10">
-            <Website url="https://www.corralonartesan.com" 
-            imageSrc="/projects/corralonartesan.png">Corralon Artesan</Website>
+        <div class="grid lg:grid-cols-2 gap-3 border-t border-secondary/15 rounded-3xl w-full h-fit p-8 shadow-lg shadow-pink-500/10">
+            {[
+                {
+                    url: "https://www.corralonartesan.com",
+                    imageSrc: "/projects/corralon-artesan.png",
+                    name: "Corralon Artesan"
+                },
+                {
+                    url: "https://estacionamiento-menu.vercel.app/",
+                    imageSrc: "/projects/estacionamiento-menu.png",
+                    name: "Menu Estacionamiento"
+                }
+            ].map((project, idx) => (
+                <Website 
+                    url={project.url}
+                    imageSrc={project.imageSrc}
+                    index={idx}
+                >
+                    {project.name}
+                </Website>
+            ))}
         </div>
 </section>
 

@@ -3,7 +3,11 @@
   --color-primary: black;
   --color-secondary: oklch(96.7% 0.003 264.542);
 }
-/* CSS */
+* {
+  scroll-behavior: smooth;
+  scroll-padding: 3.5rem;
+
+}
 :root {
   font-family: Inter, sans-serif;
   font-variant-numeric: tabular-nums;

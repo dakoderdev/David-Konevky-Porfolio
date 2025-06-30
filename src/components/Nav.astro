@@ -29,39 +29,117 @@
     <path class="cls-1" d="M490.2,73.17v-10.12c1.41.17,2.49.25,3.98.25,2.57,0,6.3-.08,7.47-4.56l-16.92-41.89h13.69l9.95,27.96h.17l9.13-27.96h13.11l-15.51,42.56c-3.57,9.71-7.72,14.6-17.09,14.6-2.9,0-5.14-.25-7.96-.83Z"/>
   </svg>
 </div>
-<nav id="nav-icon-container" class="fixed top-0 left-0 z-50 w-full p-3 flex items-stretch gap-3 bg-primary/75 border-b border-secondary/10 backdrop-blur-md">
-    <svg id="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 234 78" class="h-8 w-auto fill-secondary/90">
-        <path d="m116.87,39.08C116.87,17.59,99.48.16,78,.09h0S0,.08,0,.08v78h78c21.48-.07,38.87-17.51,38.87-39Z"/>
-        <rect x="117" width="39" height="78"/>
-        <polygon points="234 0 195 0 156 39 195 78 234 78 195 39 234 0"/>
-    </svg>
-    <div class="flex w-full h-full items-stretch justify-between pl-4">
-        <ul class="flex items-center gap-3">
-          <li>
-            <a href="/#habilidades" class="rounded-md text-xs py-2 px-4 text-secondary/60 font-medium hover:bg-secondary/30 hover:text-secondary transition">
-                Habilidades
-            </a>
-          </li>
-          <li>
-            <a class="rounded-md text-xs py-2 px-4 text-secondary/60 font-medium hover:bg-secondary/30 hover:text-secondary transition">
-                Mis Proyectos
-            </a>
-          </li>
-          </ul>
-        <ul class="flex gap-3">
-            <li>
-                <button class="rounded-md flex gap-2 items-center bg-gradient-to-br from-secondary to-secondary/60 text-xs py-2 pl-4 pr-3.5 font-medium hover:bg-secondary/30 transition">
-                    Enviame un Email
-                    <svg xmlns="http://www.w3.org/2000/svg" class="opacity-80" width="14" height="14" stroke="currentColor" viewBox="0 0 24 24" fill="none" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
-                </button>
-            </li>
-            <li>
-                <button class="rounded-md text-xs py-2 px-4 text-secondary/60 font-medium hover:bg-secondary/30 hover:text-secondary transition">
-                    Ver mi CV
-                </button>
-            </li>
-        </ul>
+<nav
+  id="nav-icon-container"
+  class="fixed top-0 left-0 z-50 w-full p-3 flex items-stretch gap-3 bg-primary/75 border-b border-secondary/10 backdrop-blur-md font-inter"
+>
+  <svg
+    id="nav-icon"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 234 78"
+    class="h-8 w-auto fill-secondary/90"
+  >
+    <path d="m116.87,39.08C116.87,17.59,99.48.16,78,.09h0S0,.08,0,.08v78h78c21.48-.07,38.87-17.51,38.87-39Z"></path>
+    <rect x="117" width="39" height="78"></rect>
+    <polygon points="234 0 195 0 156 39 195 78 234 78 195 39 234 0"></polygon>
+  </svg>
+
+  <!-- Desktop Navigation -->
+  <div class="hidden md:flex w-full h-full items-stretch justify-between pl-4">
+    <ul class="flex items-center gap-3">
+      <li>
+        <a
+          href="/#habilidades"
+          class="rounded-md text-xs py-2 px-4 text-secondary/60 font-medium hover:bg-secondary/30 hover:text-secondary transition"
+        >
+          Habilidades
+        </a>
+      </li>
+      <li>
+        <a
+          href="/#mis-proyectos"
+          class="rounded-md text-xs py-2 px-4 text-secondary/60 font-medium hover:bg-secondary/30 hover:text-secondary transition"
+        >
+          Mis Proyectos
+        </a>
+      </li>
+      <li>
+        <a
+          href="/#contacto"
+          class="rounded-md text-xs py-2 px-4 text-secondary/60 font-medium hover:bg-secondary/30 hover:text-secondary transition"
+        >
+          Contacto
+        </a>
+      </li>
+    </ul>
+
+    <ul class="flex gap-3">
+      <li>
+        <a href="mailto:konevkydavid@gmail.com" class="dark rounded-md flex gap-2 items-center bg-gradient-to-br from-secondary to-secondary/60 text-xs py-2 pl-4 pr-3.5 font-medium hover:bg-secondary/30 transition">
+          Enviame un Email
+          <svg xmlns="http://www.w3.org/2000/svg" class="opacity-80" width="14" height="14" stroke="currentColor" viewBox="0 0 24 24" fill="none" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <button class="rounded-md text-xs py-2 px-4 text-secondary/60 font-medium hover:bg-secondary/30 hover:text-secondary transition">
+          Ver mi CV
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Mobile Menu Button -->
+  <div class="md:hidden flex items-center ml-auto">
+    <button
+      id="mobile-menu-button"
+      class="rounded-md p-2 text-secondary/60 hover:bg-secondary/30 hover:text-secondary transition"
+    >
+      <!-- Hamburger Icon -->
+      <svg id="hamburger-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+      <!-- Close Icon -->
+      <svg id="close-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden z-45 absolute top-full left-0 right-0 p-2 hidden">
+    <div class="p-4 space-y-3 bg-primary/75 border rounded-xl border-secondary/10 backdrop-blur-md">
+      <div class="space-y-2">
+        <a
+          href="/#habilidades"
+          class="mobile-menu-link block rounded-md text-xs text-center py-2 px-4 text-secondary/60 font-medium hover:bg-secondary/30 hover:text-secondary transition"
+        >
+          Habilidades
+        </a>
+        <a
+          href="/#mis-proyectos"
+          class="mobile-menu-link block rounded-md text-xs text-center py-2 px-4 text-secondary/60 font-medium hover:bg-secondary/30 hover:text-secondary transition"
+        >
+          Mis Proyectos
+        </a>
       </div>
+
+      <div class="pt-2 border-t border-secondary/10 space-y-2">
+        <a href="mailto:konevkydavid@gmail.com" class="dark mobile-menu-button w-full rounded-md flex gap-2 items-center justify-center bg-gradient-to-br from-secondary to-secondary/60 text-xs py-2 pl-4 pr-3.5 font-medium hover:bg-secondary/30 transition">
+          Enviame un Email
+          <svg xmlns="http://www.w3.org/2000/svg" class="opacity-80" width="14" height="14" stroke="currentColor" viewBox="0 0 24 24" fill="none" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+          </svg>
+        </a>
+        <button class="mobile-menu-button w-full rounded-md text-xs py-2 px-4 text-secondary/60 font-medium hover:bg-secondary/30 hover:text-secondary transition">
+          Ver mi CV
+        </button>
+      </div>
+    </div>
+  </div>
 </nav>
 
 <style>
@@ -76,6 +154,18 @@
     opacity: 1;
     translate: 0;
     pointer-events: auto;
+  }
+
+  #mobile-menu {
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  #mobile-menu.open {
+    max-height: 500px;
+    opacity: 1;
   }
 </style>
 
@@ -96,4 +186,57 @@
             }
         });
     });
+
+  // Mobile menu toggle functionality
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  const closeIcon = document.getElementById('close-icon');
+  const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+  const mobileMenuButtons = document.querySelectorAll('.mobile-menu-button');
+
+  let isMenuOpen = false;
+
+  function toggleMenu() {
+    isMenuOpen = !isMenuOpen;
+    if (isMenuOpen) {
+      mobileMenu?.classList.remove('hidden');
+      void mobileMenu?.offsetWidth;
+      mobileMenu?.classList.add('open');
+      hamburgerIcon?.classList.add('hidden');
+      closeIcon?.classList.remove('hidden');
+    } else {
+      mobileMenu?.classList.remove('open');
+      mobileMenu?.addEventListener('transitionend', function handler() {
+        if (!isMenuOpen) mobileMenu?.classList.add('hidden');
+        mobileMenu?.removeEventListener('transitionend', handler);
+      });
+      hamburgerIcon?.classList.remove('hidden');
+      closeIcon?.classList.add('hidden');
+    }
+  }
+
+  function closeMenu() {
+    isMenuOpen = false;
+    mobileMenu?.classList.add('hidden');
+    hamburgerIcon?.classList.remove('hidden');
+    closeIcon?.classList.add('hidden');
+  }
+
+  mobileMenuButton?.addEventListener('click', toggleMenu);
+
+  mobileMenuLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  mobileMenuButtons.forEach(button => {
+    button.addEventListener('click', closeMenu);
+  });
+
+  document.addEventListener('click', (event) => {
+    const nav = document.getElementById('nav-icon-container');
+    if (isMenuOpen && nav && !nav.contains(event.target)) {
+      closeMenu();
+    }
+  });
 </script>
