@@ -1,23 +1,35 @@
 ---
 import SkillsCode from "./SkillsCode.astro";
 import SkillIcon from "./SkillIcon.astro";
+import Image from "astro/components/Image.astro";
 ---
 <section data-aos="fade-up" data-aos-duration="700" id="habilidades" class="relative overflow-hidden text-secondary rounded-t-4xl px-4 py-8 md:p-14 min-h-screen 2xl:max-w-7xl mx-auto border-t border-secondary/10 h-fit">
-    <div class="absolute -top-24 left-1/2 md:left-3/4 -translate-1/2 w-1/2 h-1/2 -z-10 rounded-b-full blur-3xl bg-emerald-500/20"></div>
     <div class="flex flex-col gap-4 items-center w-full">
-        <article data-aos="flip-right" class="w-fit h-fit p-5 rounded-4xl bg-primary/80 border border-secondary/10 shadow-lg shadow-emerald-500/10">
+        <article data-aos="flip-right" class="w-fit h-fit p-5 rounded-4xl bg-linear-215 from-primary/80 to-emerald-300/10 border border-secondary/10 shadow-[0.5px_-0.5px_0_0] shadow-secondary/20">
             <svg xmlns="http://www.w3.org/2000/svg" width="84" height="84" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M10 4v4"/><path d="M2 8h20"/><path d="M6 4v4"/></svg>
         </article>
         <h2 data-aos="fade-up" data-aos-duration="500" class="text-secondary text-4xl md:text-5xl text-center pb-6 font-semibold">Habilidades</h2>
-        <p data-aos="fade-up" class="text-secondary/80 text-base md:text-lg max-w-2xl text-pretty md:pb-6">
-        Mi <b>especialidad</b> es el desarrollo de aplicaciones web <b>eficientes</b>, <b>estéticas</b> y <b>con un buen rendimiento</b>.
-        Me esfuerzo por encontrar el equilibrio entre <b>diseño</b>, <b>funcionalidad</b> y <b>usabilidad</b>, creando soluciones claras y orientadas a las necesidades reales de los usuarios y del cliente.
-        Mi enfoque está en la <b>calidad del código</b>, la <b>escalabilidad de los proyectos</b> y <b>crear un producto unico.</b>
-        </p>
+        <div class="space-y-3 px-4 md:px-0">
+            <ul class="grid md:grid-cols-2 mx-auto w-fit h-fit max-w-2xl gap-4">
+                <li data-aos="fade-left" class="relative flex items-center flex-col min-[550px]:max-md:-translate-x-3 sm:flex-row gap-3 md:shadow-[0.5px_-0.5px_0_0] shadow-secondary/5 rounded-2xl text-secondary/80 w-full border py-4 px-6 border-secondary/10 bg-radial-[at_100%_-30%] from-50% from-emerald-900/3 to-emerald-300/5">
+                    <Image src="/other-logos/utn.svg" alt="UTN Logo" class="size-14 sm:size-8 text-secondary opacity-80" width={32} height={32} />
+                    <p class="text-center text-balance sm:text-start pb-2 sm:pb-0">Estudiante de la <b class="font-semibold">Universidad Tecnológica Nacional</b></p>
+                </li>
+                <li data-aos="fade-left" data-aos-delay={50} class="relative flex items-center flex-col min-[550px]:max-md:translate-x-3 sm:flex-row gap-3 md:shadow-[0.5px_-0.5px_0_0] shadow-secondary/5 rounded-2xl w-full text-secondary/80 border py-4 px-6 border-secondary/10 bg-radial-[at_100%_-30%] from-50% from-emerald-900/3 to-emerald-300/5">
+                    <svg class="min-w-8 min-h-8 size-14 sm:size-8 aspect-square text-secondary opacity-80" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10 9-3 3 3 3"/><path d="m14 15 3-3-3-3"/><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                    <p class="text-center text-balance sm:text-start pb-2 sm:pb-0">Recibido de la carrera de <b class="font-semibold">Programación</b> en Tucumán</p>
+                </li>
+            </ul>
+            <p data-aos="fade-up" class="text-secondary/80 pt-6 pb-0 mx-auto text-base md:text-lg max-w-2xl text-pretty md:pb-6">
+            Mi <b class="text-emerald-100/80">especialidad</b> es el desarrollo de aplicaciones web <b class="text-emerald-100/80">eficientes</b>, <b class="text-emerald-100/80">estéticas</b> y <b class="text-emerald-100/80">con un buen rendimiento</b>.
+            Me esfuerzo por encontrar el equilibrio entre <b class="text-emerald-100/80">diseño</b>, <b class="text-emerald-100/80">funcionalidad</b> y <b class="text-emerald-100/80">usabilidad</b>, creando soluciones claras y orientadas a las necesidades reales de los usuarios y del cliente.
+            Mi enfoque está en la <b class="text-emerald-100/80">calidad del código</b>, la <b class="text-emerald-100/80">escalabilidad de los proyectos</b> y <b class="text-emerald-100/80">crear un producto unico.</b>
+            </p>
+        </div>
         <div class="w-full flex pb-3 md:pb-6 flex-col">
            <SkillsCode />
         </div>
-        <div class="w-full grid gap-y-8 md:grid-cols-2 content-start justify-center px-8">
+        <div class="w-full grid gap-y-8 md:grid-cols-2 content-start justify-center">
             <div class="md:border-r border-secondary/10">
                 <h3 class="text-secondary/80 text-3xl pb-4 font-medium text-center">Lenguajes</h3>
                 <div class="flex flex-wrap gap-3 justify-center">
@@ -47,6 +59,7 @@ import SkillIcon from "./SkillIcon.astro";
             </div>
         </div>
     </div>
+    <div class="absolute -top-24 left-1/2 md:left-3/4 -translate-1/2 w-1/2 h-1/2 -z-10 rounded-b-full blur-3xl bg-conic to-emerald-800/20 from-emerald-300/40"></div>
 </section>
 
 <style>

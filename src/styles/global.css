@@ -8,6 +8,12 @@
   scroll-padding: 3.5rem;
 
 }
+
+*::selection {
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
+}
+
 :root {
   font-family: Inter, sans-serif;
   font-variant-numeric: tabular-nums;
@@ -18,3 +24,8 @@
     font-family: InterVariable, sans-serif;
   }
 }
+
+@utility no-scrollbar {
+  @apply [scrollbar-width:none] [&::-webkit-scrollbar]:hidden;
+}
+

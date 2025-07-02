@@ -2,19 +2,19 @@
 import Website from "./Website.astro";
 ---
 <section data-aos="fade-up" id="mis-proyectos" data-aos-duration="700" class="relative overflow-hidden text-secondary rounded-t-4xl px-4 py-8 md:p-14 2xl:max-w-7xl mx-auto border-t border-secondary/10 h-fit">
-    <div class="absolute -top-24 left-1/2 md:left-2/5 -translate-1/2 w-1/2 h-1/2 -z-10 rounded-b-full blur-3xl bg-pink-500/20"></div>
+    <div class="absolute -top-24 left-1/2 md:left-2/5 -translate-1/2 w-1/2 h-1/2 -z-10 rounded-b-full blur-3xl bg-conic from-yellow-900/20 to-red-300/60"></div>
     <div class="flex flex-col gap-4 items-center w-full">
-        <article data-aos="flip-right" class="w-fit h-fit p-5 rounded-4xl bg-primary/80 border border-secondary/10 shadow-lg shadow-pink-500/10">
+        <article data-aos="flip-right" class="w-fit h-fit p-5 rounded-4xl bg-linear-135 from-primary/80 to-red-300/10 border border-secondary/10 shadow-[-0.5px_-0.5px_0_0] shadow-secondary/20">
             <svg xmlns="http://www.w3.org/2000/svg" width="84" height="84" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M7 2h10"/><path d="M5 6h14"/><rect width="18" height="12" x="3" y="10" rx="2"/>
             </svg>
         </article>
         <h2 data-aos="fade-up" data-aos-duration="500" class="text-secondary text-4xl md:text-5xl text-center pb-6 font-semibold">Mis Proyectos</h2>
-        <p data-aos="fade-up" class="text-secondary/80 text-base md:text-lg max-w-2xl text-pretty md:pb-6">
-            Mi proceso de desarrollo se centra en priorizar la <b>experiencia de usuario</b> y ofrecer un <b>nivel de detalle</b> que haga que navegar por cada uno de mis proyectos sea <b>satisfactorio</b>.  
-            Siempre busco <b>adaptar</b> mi enfoque según el <b>tamaño</b> y la <b>complejidad</b> de cada caso.
+        <p data-aos="fade-up" class="text-secondary/80 mx-auto text-base md:text-lg max-w-2xl text-pretty pb-8 px-4">
+            Mi proceso de desarrollo se centra en priorizar la <b class="text-red-100/80">experiencia de usuario</b> y ofrecer un <b class="text-red-100/80">nivel de detalle</b> que haga que navegar por cada uno de mis proyectos sea <b class="text-red-100/80">satisfactorio</b>.  
+            Siempre busco <b class="text-red-100/80">adaptar</b> mi enfoque según el <b class="text-red-100/80">tamaño</b> y la <b class="text-red-100/80">complejidad</b> de cada caso.
         </p>
-        <div class="grid lg:grid-cols-2 gap-3 border-t border-secondary/15 rounded-3xl w-full h-fit p-8 shadow-lg shadow-pink-500/10">
+        <div data-aos="fade" class="grid min-[850px]:grid-cols-2 gap-4 sm:border-t border-red-200/20 rounded-3xl w-full h-fit sm:p-8">
             {[
                 {
                     url: "https://www.corralonartesan.com",

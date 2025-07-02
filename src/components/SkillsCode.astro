@@ -60,26 +60,26 @@ listar_habilidades(habilidades_python)
 
 ---
 
-<ul id="buttons-container" class="hidden md:flex w-full pl-2 items-center gap-2 text-sm text-secondary/80 font-medium">
-    <li data-aos="fade-left"><button data-lang="javascript" class="flex gap-3 py-2 pl-2 pr-4 border-secondary/10 border-x border-t rounded-x-md rounded-t-md cursor-pointer transition-colors duration-500 bg-emerald-600/10 text-secondary">
-        <Image src="/framework-logos/javascript.png" class="w-5 h-5 inline-block rounded-sm transition-colors" alt="Javascript logo" width={24} height={24} />
-        Javascript
+<ul id="buttons-container" class="relative z-30 max-md:translate-y-8 flex w-full items-center justify-center md:justify-start gap-2 text-sm text-secondary/80 pb-2 font-medium">
+    <li data-aos="fade-left"><button data-lang="javascript" class="flex gap-3 py-2 px-2 md:pr-3 rounded-xl border border-secondary/10 cursor-pointer backdrop-blur-lg transition-colors duration-500 bg-linear-225 from-emerald-400/5 from-75% to-emerald-400/15 text-secondary">
+        <Image src="/framework-logos/javascript.png" class="size-8 md:size-5 inline-block rounded-md transition-colors" alt="Javascript logo" width={24} height={24} />
+        <span class="sr-only md:not-sr-only hidden md:inline-block">Javascript</span>
     </button></li>
-    <li data-aos="fade-left"><button data-lang="typescript" class="flex gap-3 py-2 pl-2 pr-4 border-secondary/10 border-x border-t rounded-x-md rounded-t-md cursor-pointer transition-colors duration-500">
-        <Image src="/framework-logos/typescript.svg" class="w-5 h-5 inline-block rounded-sm transition-colors" alt="Typescript logo" width={24} height={24} />
-        Typescript
+    <li data-aos="fade-left"><button data-lang="typescript" class="flex gap-3 py-2 px-2 md:pr-3 rounded-xl border-secondary/10 cursor-pointer backdrop-blur-lg transition-colors duration-500 bg-primary/80">
+        <Image src="/framework-logos/typescript.svg" class="size-8 md:size-5 inline-block rounded-md transition-colors" alt="Typescript logo" width={24} height={24} />
+        <span class="sr-only md:not-sr-only hidden md:inline-block">Typescript</span>
     </button></li>
-    <li data-aos="fade-left"><button data-lang="csharp" class="flex gap-3 py-2 pl-2 pr-4 border-secondary/10 border-x border-t rounded-x-md rounded-t-md cursor-pointer transition-colors duration-500">
-        <Image src="/framework-logos/c-sharp.png" class="w-5 h-5 inline-block rounded-sm transition-colors" alt="C# logo" width={24} height={24} />
-        C#
+    <li data-aos="fade-left"><button data-lang="csharp" class="flex gap-3 py-2 px-2 md:pr-3 rounded-xl border-secondary/10 cursor-pointer backdrop-blur-lg transition-colors duration-500 bg-primary/80">
+        <Image src="/framework-logos/c-sharp.png" class="size-8 md:size-5 inline-block rounded-md transition-colors" alt="C# logo" width={24} height={24} />
+        <span class="sr-only md:not-sr-only hidden md:inline-block">C#</span>
     </button></li>
-    <li data-aos="fade-left"><button data-lang="python" class="flex gap-3 py-2 pl-2 pr-4 border-secondary/10 border-x border-t rounded-x-md rounded-t-md cursor-pointer transition-colors duration-500">
-        <Image src="/framework-logos/python.webp" class="w-5 h-5 inline-block rounded-sm transition-colors" alt="Python logo" width={24} height={24} />
-        Python
+    <li data-aos="fade-left"><button data-lang="python" class="flex gap-3 py-2 px-2 md:pr-3 rounded-xl border-secondary/10 cursor-pointer backdrop-blur-lg transition-colors duration-500 bg-primary/80">
+        <Image src="/framework-logos/python.webp" class="size-8 md:size-5 inline-block rounded-md transition-colors" alt="Python logo" width={24} height={24} />
+        <span class="sr-only md:not-sr-only hidden md:inline-block">Python</span>
     </button></li>
 </ul>
 
-<div data-aos="fade-left" data-aos-duration="600" class="hidden md:block w-full md:p-8 border border-secondary/10 rounded-md">
+<div data-aos="fade-left" data-aos-duration="600" class="w-full z-20 p-6 md:p-8 border border-emerald-300/10 saturate-50 hue-rotate-120 rounded-2xl">
     <div id="code-javascript">
         <Code code={codeJavascript} lang="javascript" theme="vitesse-black" defaultColor={false} />
     </div>
@@ -93,8 +93,13 @@ listar_habilidades(habilidades_python)
         <Code code={codePython} lang="python" theme="vitesse-black" defaultColor={false} />
     </div>
 </div>
-
 <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('pre').forEach(pre => {
+      pre.classList.add('no-scrollbar');
+    });
+  });
+
   const buttonsContainer = document.getElementById('buttons-container');
   const buttons = buttonsContainer.querySelectorAll('button');
   const codeBlocks = {
@@ -107,9 +112,10 @@ listar_habilidades(habilidades_python)
   buttons.forEach(button => {
     button.addEventListener('click', () => {
       // Estilo activo
-      buttons.forEach(btn => btn.classList.remove('bg-emerald-600/10', 'text-secondary'));
-      button.classList.add('bg-emerald-600/10', 'text-secondary');
-
+      buttons.forEach(btn => btn.classList.remove('bg-linear-225', 'from-emerald-400/5', 'from-75%', 'to-emerald-400/15', 'text-secondary','border'));
+      buttons.forEach(btn => btn.classList.add('bg-primary/80'));
+      button.classList.remove('bg-primary/80');
+      button.classList.add('bg-linear-225', 'from-emerald-400/5', 'from-75%', 'to-emerald-400/15', 'text-secondary','border');
       // Mostrar el bloque correcto
       const lang = button.getAttribute('data-lang');
       Object.keys(codeBlocks).forEach(key => {

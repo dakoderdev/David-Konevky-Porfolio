@@ -1,13 +1,23 @@
-<div data-aos="fade-up" data-aos-duration="2000" class="min-h-[74px] flex items-center">
+---
+const navLinks = [
+  { href: "/#habilidades", label: "Habilidades" },
+  { href: "/#mis-proyectos", label: "Mis Proyectos" },
+  { href: "/#contacto", label: "Contacto" }
+];
+---
+<h1 class="flex items-center min-h-[74px] m-0 p-0 text-[0]">
+  <span class="sr-only">David Konevky</span>
+  <!-- Desktop SVG (hidden on mobile) -->
   <svg
-    class="text-secondary drop-shadow-lg"
+    class="text-secondary drop-shadow-lg hidden sm:block"
     id="hero-svg"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 530.76 74"
     fill="url(#hero-gradient)"
     stroke="currentColor"
     stroke-width="0.25"
-    aria-label="“David Konevky”"
+    aria-hidden="true"
+    focusable="false"
   >
     <defs>
       <linearGradient id="hero-gradient" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
@@ -15,68 +25,85 @@
         <stop offset="100%" stop-color="oklch(75.7% 0.022 261.325)" /> 
       </linearGradient>
     </defs>
-    <path class="cls-1" d="M30.94,0h13.27v59.32h-13.27v-4.23h-.17c-1.66,2.24-6.14,5.56-12.28,5.56C7.22,60.64,0,52.02,0,38.08S7.22,15.51,18.5,15.51c6.14,0,10.62,3.32,12.28,5.56h.17V0ZM30.7,38.08c0-8.3-3.15-12.61-8.54-12.61s-8.55,4.31-8.55,12.61,3.15,12.61,8.55,12.61,8.54-4.31,8.54-12.61Z"/>
-    <path class="cls-1" d="M48.12,48.2c0-8.79,7.22-12.2,16.26-14.1,4.65-1,11.2-1.66,11.2-5.89,0-2.32-1.83-3.82-5.64-3.82-4.89,0-7.13,1.99-7.55,6.14h-12.61c.41-8.13,6.39-15.1,20.74-15.1,11.53,0,17.92,4.65,17.92,17.67v16.43c0,2.24.25,3.24,1.58,3.24.33,0,.58,0,1.08-.08v6.3c-2.65.5-5.39.75-7.3.75-5.31,0-7.3-1.99-7.96-5.56h-.17c-2.99,3.73-7.88,6.47-14.02,6.47-8.3,0-13.52-4.89-13.52-12.44ZM75.58,42.14v-3.57c-1.74.66-3.73,1.16-7.22,1.99-4.89,1.16-6.64,3.24-6.64,6.22,0,3.24,2.07,4.73,5.48,4.73,5.31,0,8.38-4.48,8.38-9.37Z"/>
-    <path class="cls-1" d="M104.11,59.32l-14.68-42.48h13.44l8.63,28.04h.17l8.63-28.04h13.11l-14.68,42.48h-14.6Z"/>
-    <path class="cls-1" d="M135.55,11.78V0h13.27v11.78h-13.27ZM135.55,59.32V16.84h13.27v42.48h-13.27Z"/>
-    <path class="cls-1" d="M183.67,0h13.27v59.32h-13.27v-4.23h-.17c-1.66,2.24-6.14,5.56-12.28,5.56-11.28,0-18.5-8.63-18.5-22.56s7.22-22.56,18.5-22.56c6.14,0,10.62,3.32,12.28,5.56h.17V0ZM183.42,38.08c0-8.3-3.15-12.61-8.54-12.61s-8.55,4.31-8.55,12.61,3.15,12.61,8.55,12.61,8.54-4.31,8.54-12.61Z"/>
-    <path class="cls-1" d="M247.96,59.32l-10.04-17.5-4.65,4.89v12.61h-13.27V0h13.27v32.6l14.19-15.76h14.1l-15.02,15.93,16.76,26.55h-15.35Z"/>
-    <path class="cls-1" d="M259.57,38.16c0-13.36,8.54-22.73,22.81-22.73s22.57,9.13,22.57,22.48-8.55,22.81-22.81,22.81-22.56-9.13-22.56-22.56ZM291.51,38.08c0-8.21-3.32-12.69-9.21-12.69s-9.29,4.48-9.29,12.69,3.32,12.69,9.29,12.69,9.21-4.48,9.21-12.69Z"/>
-    <path class="cls-1" d="M349.92,30.61v28.7h-13.27v-24.47c0-6.39-2.24-8.55-6.64-8.55-5.06,0-7.96,2.57-7.96,8.46v24.56h-13.27V16.84h13.27v6.14h.17c2.24-3.9,6.39-7.47,13.94-7.47,8.21,0,13.77,5.39,13.77,15.1Z"/>
-    <path class="cls-1" d="M397.28,41.65h-30.53c0,5.89,4.15,9.13,9.13,9.13s6.72-2.16,7.55-4.31h13.52c-2.41,8.63-9.46,14.27-21.4,14.27-13.77,0-22.07-9.37-22.07-22.65,0-12.44,7.8-22.65,22.07-22.65s21.74,8.54,21.74,24.22v1.99ZM383.93,33.43c0-5.48-3.24-8.38-8.38-8.38s-8.38,2.9-8.71,8.38h17.09Z"/>
-    <path class="cls-1" d="M410.64,59.32l-14.68-42.48h13.44l8.63,28.04h.17l8.63-28.04h13.11l-14.68,42.48h-14.6Z"/>
-    <path class="cls-1" d="M470.04,59.32l-10.04-17.5-4.65,4.89v12.61h-13.27V0h13.27v32.6l14.19-15.76h14.1l-15.02,15.93,16.76,26.55h-15.35Z"/>
-    <path class="cls-1" d="M490.2,73.17v-10.12c1.41.17,2.49.25,3.98.25,2.57,0,6.3-.08,7.47-4.56l-16.92-41.89h13.69l9.95,27.96h.17l9.13-27.96h13.11l-15.51,42.56c-3.57,9.71-7.72,14.6-17.09,14.6-2.9,0-5.14-.25-7.96-.83Z"/>
+    <path d="M30.94,0h13.27v59.32h-13.27v-4.23h-.17c-1.66,2.24-6.14,5.56-12.28,5.56C7.22,60.64,0,52.02,0,38.08S7.22,15.51,18.5,15.51c6.14,0,10.62,3.32,12.28,5.56h.17V0ZM30.7,38.08c0-8.3-3.15-12.61-8.54-12.61s-8.55,4.31-8.55,12.61,3.15,12.61,8.55,12.61,8.54-4.31,8.54-12.61Z"/>
+    <path d="M48.12,48.2c0-8.79,7.22-12.2,16.26-14.1,4.65-1,11.2-1.66,11.2-5.89,0-2.32-1.83-3.82-5.64-3.82-4.89,0-7.13,1.99-7.55,6.14h-12.61c.41-8.13,6.39-15.1,20.74-15.1,11.53,0,17.92,4.65,17.92,17.67v16.43c0,2.24.25,3.24,1.58,3.24.33,0,.58,0,1.08-.08v6.3c-2.65.5-5.39.75-7.3.75-5.31,0-7.3-1.99-7.96-5.56h-.17c-2.99,3.73-7.88,6.47-14.02,6.47-8.3,0-13.52-4.89-13.52-12.44ZM75.58,42.14v-3.57c-1.74.66-3.73,1.16-7.22,1.99-4.89,1.16-6.64,3.24-6.64,6.22,0,3.24,2.07,4.73,5.48,4.73,5.31,0,8.38-4.48,8.38-9.37Z"/>
+    <path d="M104.11,59.32l-14.68-42.48h13.44l8.63,28.04h.17l8.63-28.04h13.11l-14.68,42.48h-14.6Z"/>
+    <path d="M135.55,11.78V0h13.27v11.78h-13.27ZM135.55,59.32V16.84h13.27v42.48h-13.27Z"/>
+    <path d="M183.67,0h13.27v59.32h-13.27v-4.23h-.17c-1.66,2.24-6.14,5.56-12.28,5.56-11.28,0-18.5-8.63-18.5-22.56s7.22-22.56,18.5-22.56c6.14,0,10.62,3.32,12.28,5.56h.17V0ZM183.42,38.08c0-8.3-3.15-12.61-8.54-12.61s-8.55,4.31-8.55,12.61,3.15,12.61,8.55,12.61,8.54-4.31,8.54-12.61Z"/>
+    <path d="M247.96,59.32l-10.04-17.5-4.65,4.89v12.61h-13.27V0h13.27v32.6l14.19-15.76h14.1l-15.02,15.93,16.76,26.55h-15.35Z"/>
+    <path d="M259.57,38.16c0-13.36,8.54-22.73,22.81-22.73s22.57,9.13,22.57,22.48-8.55,22.81-22.81,22.81-22.56-9.13-22.56-22.56ZM291.51,38.08c0-8.21-3.32-12.69-9.21-12.69s-9.29,4.48-9.29,12.69,3.32,12.69,9.29,12.69,9.21-4.48,9.21-12.69Z"/>
+    <path d="M349.92,30.61v28.7h-13.27v-24.47c0-6.39-2.24-8.55-6.64-8.55-5.06,0-7.96,2.57-7.96,8.46v24.56h-13.27V16.84h13.27v6.14h.17c2.24-3.9,6.39-7.47,13.94-7.47,8.21,0,13.77,5.39,13.77,15.1Z"/>
+    <path d="M397.28,41.65h-30.53c0,5.89,4.15,9.13,9.13,9.13s6.72-2.16,7.55-4.31h13.52c-2.41,8.63-9.46,14.27-21.4,14.27-13.77,0-22.07-9.37-22.07-22.65,0-12.44,7.8-22.65,22.07-22.65s21.74,8.54,21.74,24.22v1.99ZM383.93,33.43c0-5.48-3.24-8.38-8.38-8.38s-8.38,2.9-8.71,8.38h17.09Z"/>
+    <path d="M410.64,59.32l-14.68-42.48h13.44l8.63,28.04h.17l8.63-28.04h13.11l-14.68,42.48h-14.6Z"/>
+    <path d="M470.04,59.32l-10.04-17.5-4.65,4.89v12.61h-13.27V0h13.27v32.6l14.19-15.76h14.1l-15.02,15.93,16.76,26.55h-15.35Z"/>
+    <path d="M490.2,73.17v-10.12c1.41.17,2.49.25,3.98.25,2.57,0,6.3-.08,7.47-4.56l-16.92-41.89h13.69l9.95,27.96h.17l9.13-27.96h13.11l-15.51,42.56c-3.57,9.71-7.72,14.6-17.09,14.6-2.9,0-5.14-.25-7.96-.83Z"/>
   </svg>
-</div>
+  <!-- Mobile SVG (shown on mobile only) -->
+  <svg
+    id="hero-svg-mobile"
+    viewBox="0 0 312 122"
+    fill="url(#hero-gradient2)"
+    stroke="currentColor"
+    stroke-width="0.25"
+    xmlns="http://www.w3.org/2000/svg"
+    class="text-secondary drop-shadow-lg w-full block sm:hidden"
+    aria-hidden="true"
+    focusable="false"
+  >
+    <defs>
+      <linearGradient id="hero-gradient2" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+        <stop offset="0%" stop-color="currentColor" />
+        <stop offset="100%" stop-color="oklch(75.7% 0.022 261.325)" /> 
+      </linearGradient>
+    </defs>
+    <path d="M53.94 1H67.21V60.32H53.94V56.09H53.77C52.11 58.33 47.63 61.65 41.49 61.65C30.22 61.64 23 53.02 23 39.08C23 25.14 30.22 16.51 41.5 16.51C47.64 16.51 52.12 19.83 53.78 22.07H53.95V1H53.94ZM53.7 39.08C53.7 30.78 50.55 26.47 45.16 26.47C39.77 26.47 36.61 30.78 36.61 39.08C36.61 47.38 39.76 51.69 45.16 51.69C50.56 51.69 53.7 47.38 53.7 39.08Z"/>
+    <path d="M71.12 49.2001C71.12 40.4101 78.34 37.0001 87.38 35.1001C92.03 34.1001 98.58 33.4401 98.58 29.2101C98.58 26.8901 96.75 25.3901 92.94 25.3901C88.05 25.3901 85.81 27.3801 85.39 31.5301H72.78C73.19 23.4001 79.17 16.4301 93.52 16.4301C105.05 16.4301 111.44 21.0801 111.44 34.1001V50.5301C111.44 52.7701 111.69 53.7701 113.02 53.7701C113.35 53.7701 113.6 53.7701 114.1 53.6901V59.9901C111.45 60.4901 108.71 60.7401 106.8 60.7401C101.49 60.7401 99.5 58.7501 98.84 55.1801H98.67C95.68 58.9101 90.79 61.6501 84.65 61.6501C76.35 61.6501 71.13 56.7601 71.13 49.2101L71.12 49.2001ZM98.58 43.1401V39.5701C96.84 40.2301 94.85 40.7301 91.36 41.5601C86.47 42.7201 84.72 44.8001 84.72 47.7801C84.72 51.0201 86.79 52.5101 90.2 52.5101C95.51 52.5101 98.58 48.0301 98.58 43.1401Z"/>
+    <path d="M127.11 60.32L112.43 17.84H125.87L134.5 45.88H134.67L143.3 17.84H156.41L141.73 60.32H127.13H127.11Z"/>
+    <path d="M158.55 12.78V1H171.82V12.78H158.55ZM158.55 60.32V17.84H171.82V60.32H158.55Z"/>
+    <path d="M206.67 1H219.94V60.32H206.67V56.09H206.5C204.84 58.33 200.36 61.65 194.22 61.65C182.94 61.65 175.72 53.02 175.72 39.09C175.72 25.16 182.94 16.53 194.22 16.53C200.36 16.53 204.84 19.85 206.5 22.09H206.67V1ZM206.42 39.08C206.42 30.78 203.27 26.47 197.88 26.47C192.49 26.47 189.33 30.78 189.33 39.08C189.33 47.38 192.48 51.69 197.88 51.69C203.28 51.69 206.42 47.38 206.42 39.08Z"/>
+    <path d="M28.96 106.32L18.92 88.82L14.27 93.71V106.32H1V47H14.27V79.6L28.46 63.84H42.56L27.54 79.77L44.3 106.32H28.95H28.96Z"/>
+    <path d="M40.5701 85.1601C40.5701 71.8001 49.1101 62.4301 63.3801 62.4301C77.6501 62.4301 85.9501 71.5601 85.9501 84.9101C85.9501 98.2601 77.4001 107.72 63.1401 107.72C48.8801 107.72 40.58 98.5901 40.58 85.1601H40.5701ZM72.5101 85.0801C72.5101 76.8701 69.19 72.3901 63.3 72.3901C57.41 72.3901 54.0101 76.8701 54.0101 85.0801C54.0101 93.2901 57.33 97.7701 63.3 97.7701C69.27 97.7701 72.5101 93.2901 72.5101 85.0801Z"/>
+    <path d="M130.92 77.61V106.31H117.65V81.84C117.65 75.45 115.41 73.29 111.01 73.29C105.95 73.29 103.05 75.86 103.05 81.75V106.31H89.78V63.84H103.05V69.98H103.22C105.46 66.08 109.61 62.51 117.16 62.51C125.37 62.51 130.93 67.9 130.93 77.61H130.92Z"/>
+    <path d="M178.28 88.6499H147.75C147.75 94.5399 151.9 97.7799 156.88 97.7799C161.86 97.7799 163.6 95.6199 164.43 93.4699H177.95C175.54 102.1 168.49 107.74 156.55 107.74C142.78 107.74 134.48 98.3699 134.48 85.0899C134.48 72.6499 142.28 62.4399 156.55 62.4399C170.82 62.4399 178.29 70.9799 178.29 86.6599V88.6499H178.28ZM164.93 80.4299C164.93 74.9499 161.69 72.0499 156.55 72.0499C151.41 72.0499 148.17 74.9499 147.84 80.4299H164.93Z"/>
+    <path d="M191.64 106.32L176.96 63.84H190.4L199.03 91.88H199.2L207.83 63.84H220.94L206.26 106.32H191.66H191.64Z"/>
+    <path d="M251.04 106.32L241 88.82L236.35 93.71V106.32H223.08V47H236.35V79.6L250.54 63.84H264.64L249.62 79.77L266.38 106.32H251.03H251.04Z"/>
+    <path d="M271.2 120.17V110.05C272.61 110.22 273.69 110.3 275.18 110.3C277.75 110.3 281.48 110.22 282.65 105.74L265.73 63.85H279.42L289.37 91.81H289.54L298.67 63.85H311.78L296.27 106.41C292.7 116.12 288.55 121.01 279.18 121.01C276.28 121.01 274.04 120.76 271.22 120.18L271.2 120.17Z"/>
+  </svg>
+</h1>
+
 <nav
   id="nav-icon-container"
-  class="fixed top-0 left-0 z-50 w-full p-3 flex items-stretch gap-3 bg-primary/75 border-b border-secondary/10 backdrop-blur-md font-inter"
+  class="fixed top-0 left-0 z-100 w-full p-3 flex items-stretch gap-3 bg-primary/75 border-b border-secondary/10 backdrop-blur-md font-inter"
 >
-  <svg
-    id="nav-icon"
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 234 78"
-    class="h-8 w-auto fill-secondary/90"
-  >
-    <path d="m116.87,39.08C116.87,17.59,99.48.16,78,.09h0S0,.08,0,.08v78h78c21.48-.07,38.87-17.51,38.87-39Z"></path>
-    <rect x="117" width="39" height="78"></rect>
-    <polygon points="234 0 195 0 156 39 195 78 234 78 195 39 234 0"></polygon>
-  </svg>
+  <a href="#top" aria-label="Ir al inicio" class="flex items-center">
+    <svg
+      id="nav-icon"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 234 78"
+      class="h-8 w-auto fill-secondary/90"
+    >
+      <path d="m116.87,39.08C116.87,17.59,99.48.16,78,.09h0S0,.08,0,.08v78h78c21.48-.07,38.87-17.51,38.87-39Z"></path>
+      <rect x="117" width="39" height="78"></rect>
+      <polygon points="234 0 195 0 156 39 195 78 234 78 195 39 234 0"></polygon>
+    </svg>
+  </a>
 
   <!-- Desktop Navigation -->
   <div class="hidden md:flex w-full h-full items-stretch justify-between pl-4">
     <ul class="flex items-center gap-3">
-      <li>
-        <a
-          href="/#habilidades"
-          class="rounded-md text-xs py-2 px-4 text-secondary/60 font-medium hover:bg-secondary/30 hover:text-secondary transition"
-        >
-          Habilidades
-        </a>
-      </li>
-      <li>
-        <a
-          href="/#mis-proyectos"
-          class="rounded-md text-xs py-2 px-4 text-secondary/60 font-medium hover:bg-secondary/30 hover:text-secondary transition"
-        >
-          Mis Proyectos
-        </a>
-      </li>
-      <li>
-        <a
-          href="/#contacto"
-          class="rounded-md text-xs py-2 px-4 text-secondary/60 font-medium hover:bg-secondary/30 hover:text-secondary transition"
-        >
-          Contacto
-        </a>
-      </li>
+      {navLinks.map(link => (
+        <li>
+          <a href={link.href} class="rounded-md text-xs py-2 px-4 text-secondary/60 font-medium hover:bg-secondary/30 hover:text-secondary transition">
+            {link.label}
+          </a>
+        </li>
+      ))}
     </ul>
 
     <ul class="flex gap-3">
       <li>
-        <a href="mailto:konevkydavid@gmail.com" class="dark rounded-md flex gap-2 items-center bg-gradient-to-br from-secondary to-secondary/60 text-xs py-2 pl-4 pr-3.5 font-medium hover:bg-secondary/30 transition">
-          Enviame un Email
+        <a href="mailto:konevkydavid@gmail.com" class="dark rounded-md flex gap-2 items-center bg-linear-to-br from-secondary to-secondary/60 text-xs py-2 pl-4 pr-3.5 font-medium hover:bg-secondary/30 transition">
+          Envíame un Email
           <svg xmlns="http://www.w3.org/2000/svg" class="opacity-80" width="14" height="14" stroke="currentColor" viewBox="0 0 24 24" fill="none" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
             <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
             <rect x="2" y="4" width="20" height="16" rx="2"></rect>
@@ -84,8 +111,11 @@
         </a>
       </li>
       <li>
-        <button class="rounded-md text-xs py-2 px-4 text-secondary/60 font-medium hover:bg-secondary/30 hover:text-secondary transition">
+        <button class="rounded-md flex gap-2 items-center text-xs py-2 pl-4 pr-2 text-secondary/60 font-medium hover:bg-secondary/30 hover:text-secondary transition">
           Ver mi CV
+          <svg xmlns="http://www.w3.org/2000/svg" class="opacity-80" width="14" height="14" stroke="currentColor" viewBox="0 0 24 24" fill="none" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m9 18 6-6-6-6"/>
+          </svg>
         </button>
       </li>
     </ul>
@@ -95,7 +125,7 @@
   <div class="md:hidden flex items-center ml-auto">
     <button
       id="mobile-menu-button"
-      class="rounded-md p-2 text-secondary/60 hover:bg-secondary/30 hover:text-secondary transition"
+      class="rounded-md p-2 text-secondary/60 hover:bg-secondary/30 hover:text-secondary transition cursor-pointer"
     >
       <!-- Hamburger Icon -->
       <svg id="hamburger-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -109,33 +139,34 @@
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="md:hidden z-45 absolute top-full left-0 right-0 p-2 hidden">
-    <div class="p-4 space-y-3 bg-primary/75 border rounded-xl border-secondary/10 backdrop-blur-md">
-      <div class="space-y-2">
-        <a
-          href="/#habilidades"
-          class="mobile-menu-link block rounded-md text-xs text-center py-2 px-4 text-secondary/60 font-medium hover:bg-secondary/30 hover:text-secondary transition"
-        >
-          Habilidades
-        </a>
-        <a
-          href="/#mis-proyectos"
-          class="mobile-menu-link block rounded-md text-xs text-center py-2 px-4 text-secondary/60 font-medium hover:bg-secondary/30 hover:text-secondary transition"
-        >
-          Mis Proyectos
-        </a>
-      </div>
+  <div id="mobile-menu" class="md:hidden z-90 absolute top-full left-0 right-0 hidden">
+    <div class="p-4 space-y-3 bg-primary/75 border border-secondary/10 backdrop-blur-md">
+      <ul class="space-y-2">
+        {navLinks.map(link => (
+          <li>
+          <a
+            href={link.href}
+            class="mobile-menu-link block rounded-md text-xs text-center py-2 px-4 text-secondary/60 font-medium hover:bg-secondary/30 hover:text-secondary transition"
+          >
+            {link.label}
+          </a>
+          </li>
+        ))}
+      </ul>
 
       <div class="pt-2 border-t border-secondary/10 space-y-2">
-        <a href="mailto:konevkydavid@gmail.com" class="dark mobile-menu-button w-full rounded-md flex gap-2 items-center justify-center bg-gradient-to-br from-secondary to-secondary/60 text-xs py-2 pl-4 pr-3.5 font-medium hover:bg-secondary/30 transition">
-          Enviame un Email
+        <a href="mailto:konevkydavid@gmail.com" class="dark mobile-menu-button w-full rounded-md flex gap-2 items-center justify-center bg-linear-to-br from-secondary to-secondary/60 text-xs py-2 pl-4 pr-3.5 font-medium hover:bg-secondary/30 transition">
+          Envíame un Email
           <svg xmlns="http://www.w3.org/2000/svg" class="opacity-80" width="14" height="14" stroke="currentColor" viewBox="0 0 24 24" fill="none" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
             <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
             <rect x="2" y="4" width="20" height="16" rx="2"></rect>
           </svg>
         </a>
-        <button class="mobile-menu-button w-full rounded-md text-xs py-2 px-4 text-secondary/60 font-medium hover:bg-secondary/30 hover:text-secondary transition">
+        <button class="mobile-menu-button w-full rounded-md flex gap-2 items-center justify-center text-xs py-2 pl-4 pr-2 text-secondary/60 font-medium hover:bg-secondary/30 hover:text-secondary transition">
           Ver mi CV
+          <svg xmlns="http://www.w3.org/2000/svg" class="opacity-80" width="14" height="14" stroke="currentColor" viewBox="0 0 24 24" fill="none" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m9 18 6-6-6-6"/>
+          </svg>
         </button>
       </div>
     </div>
@@ -173,13 +204,15 @@
     document.addEventListener("DOMContentLoaded", () => {
         window.addEventListener("scroll", () => {
             const svg = document.getElementById("hero-svg");
+            const svgMobile = document.getElementById("hero-svg-mobile");
             const navIcon = document.getElementById("nav-icon-container");
-            if (!svg || !navIcon) return;
+            if (!svg || !svgMobile || !navIcon) return;
 
             const rect = svg.getBoundingClientRect();
+            const rectMobile = svgMobile.getBoundingClientRect();
 
             // Trigger 100px later
-            if (rect.top + rect.height < -100) {
+            if (rect.top + rect.height < -100 || rectMobile.top + rectMobile.height < -100) {
                 navIcon.classList.add("visible");
             } else {
                 navIcon.classList.remove("visible");
