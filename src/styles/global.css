@@ -15,14 +15,8 @@
 }
 
 :root {
-  font-family: Inter, sans-serif;
+  font-family: "Inter Variable", sans-serif;
   font-variant-numeric: tabular-nums;
-}
-@supports (font-variation-settings: normal) {
-  /* Use variable font if supported */
-  :root {
-    font-family: InterVariable, sans-serif;
-  }
 }
 
 @utility no-scrollbar {
