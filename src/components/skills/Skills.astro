@@ -29,10 +29,10 @@ import Image from "astro/components/Image.astro";
         <div class="w-full flex pb-3 md:pb-6 flex-col">
            <SkillsCode />
         </div>
-        <div class="w-full grid gap-y-8 md:grid-cols-2 content-start justify-center">
-            <div class="md:border-r border-secondary/10">
-                <h3 class="text-secondary/80 text-3xl pb-4 font-medium text-center">Lenguajes</h3>
-                <div class="flex flex-wrap gap-3 justify-center">
+        <div class="w-full grid gap-y-8 content-start justify-center">
+            <div class="w-full flex flex-col lg:flex-row gap-4 lg:gap-10 items-center">
+                <h3 class="text-secondary/80 text-3xl w-full max-w-40 font-medium text-center">Lenguajes</h3>
+                <div class="flex flex-wrap gap-3 justify-center lg:border-l lg:pl-10 lg:border-secondary/10">
                     {[
                         { name: "HTML", alt: "HTML logo", src: "/framework-logos/html.svg" },
                         { name: "CSS", alt: "CSS logo", src: "/framework-logos/css.svg" },
@@ -45,17 +45,19 @@ import Image from "astro/components/Image.astro";
                     ))}
                 </div>
             </div>
-            <div>
-                <h3 class="text-secondary/80 text-3xl pb-4 font-medium text-center">Frameworks</h3>
-                <div class="flex flex-wrap gap-3 justify-center">
+            <div class="w-full flex flex-col lg:flex-row  gap-4 lg:gap-10 items-center">
+                <h3 class="text-secondary/80 text-3xl w-full max-w-40 font-medium text-center">Tecnologías</h3>
+                <div class="flex flex-wrap gap-3 justify-center lg:border-l lg:pl-10 lg:border-secondary/10">
                     {[
                         { name: "React", alt: "React logo", src: "/framework-logos/react.svg" },
                         { name: "Next.js", alt: "Next.js logo", src: "/framework-logos/nextjs.jpeg" },
                         { name: "Astro", alt: "Astro logo", src: "/framework-logos/astro.png", extraRounded: true },
                         { name: "Tailwind", alt: "Tailwind logo", src: "/framework-logos/tailwindcss.svg" },
-                        { name: "Bootstrap", alt: "Bootstrap logo", src: "/framework-logos/bootstrap.svg" }
-                    ].map((framework, idx) => (
-                        <SkillIcon {...framework} key={idx} />
+                        { name: "Bootstrap", alt: "Bootstrap logo", src: "/framework-logos/bootstrap.svg" },
+                        { name: "Express.js", alt: "Express.js logo", src: "/framework-logos/expressjs.svg" },
+                        { name: "Prisma", alt: "Prisma logo", src: "/framework-logos/prisma.svg" },
+                    ].map((technology, idx) => (
+                        <SkillIcon {...technology} key={idx} />
                     ))}
                 </div>
             </div>
